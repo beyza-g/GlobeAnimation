@@ -70,7 +70,11 @@ function App() {
             .pointsData(pins)
             .pointAltitude('size')
             .pointColor('color')
-            .pointLabel(d => `📍 ${d.name}`);
+            // label will be the same with donations
+            .pointLabel(d => `<div  style="color:white; padding: 2px; height: 50px; font-size: 14px">
+                <b>Donations for ${d.name}</b><br/><br/>
+                POPUP CONTENT
+                </div>`);
         });
     }
   }, []);
